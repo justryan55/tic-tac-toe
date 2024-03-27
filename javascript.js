@@ -14,8 +14,13 @@ function gameboard(){
     
     function Cell(){
         let value = 0;
-        
+
+        const playerOneInput = function playerOneInput(){
+            value = playerOne.symbol;
+        }
     }
+
+    
 }
 
 function player(){
