@@ -18,6 +18,12 @@ function gameboard(){
         const playerOneInput = function playerOneInput(){
             value = playerOne.symbol;
         }
+
+        const playerTwoInput = function playerTwoInput(){
+            value = playerTwo.symbol;
+        }
+
+        return playerOneInput;
     }
 
     
