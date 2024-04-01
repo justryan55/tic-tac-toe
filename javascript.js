@@ -13,7 +13,14 @@ function gameboard(){
 }
 
 function createCell(){    
-        
+    let value = 0;
+    const addUserInput = () => {
+        // value = 
+    }
+    return {
+        addUserInput
+    };
+
 } 
 
 function createPlayer(name, symbol){
