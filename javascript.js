@@ -40,7 +40,6 @@ function createCell(){
 function gameController(){
 
 };
-
 // function createPlayer(name, symbol){
 //     return {
 //         name,
