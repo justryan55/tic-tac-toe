@@ -7,46 +7,32 @@ function gameboard(){
     for (let i = 0; i < rows; i++){
         gameboard[i] = [];
         for (let j=0; j < columns; j++){
-            gameboard[i].push(Cell());
-            console.log(gameboard);
+            gameboard[i].push(createCell());
         }
     }
-    
-    function Cell(){
-        let value = 0;
-
-        const playerOneInput = function playerOneInput(){
-            value = playerOne.symbol;
-        }
-
-        const playerTwoInput = function playerTwoInput(){
-            value = playerTwo.symbol;
-        }
-
-        return playerOneInput;
-    }
-
-    
 }
 
-function player(){
-    
-    function Player(name, symbol){
-        this.name = name;
-        this.symbol = symbol;
-        this.introduction = (name) => {
-            console.log(`Welcome ${name}`);
+function createCell(){    
+        
+} 
+
+function createPlayer(name, symbol){
+    return {
+        name,
+        symbol,
+        introduction(){
+            return `Welcome ${name}` 
         }
     }
-
-    const playerOne = new Player("Player One", "o");
-    const playerTwo = new Player("Player Two", "x");
-
 }
+
+const playerOne = createPlayer("Player One", "O");
+const playerTwo = createPlayer("Player Two", "X");
+
 
 function gameboardObjects(){
 
 }
 
-player();
 gameboard();
+
