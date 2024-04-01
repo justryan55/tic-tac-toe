@@ -14,13 +14,6 @@ const gameContainer = document.querySelector(".game");
             let cell = document.createElement('div');
             cell.classList.add("cell");
             table.appendChild(cell);
-
-            function addClickListener(i){
-                cell.addEventListener("click", () => {
-                    cell.innerText = i;
-                });
-            }
-            addClickListener(i);
         }
         gameContainer.appendChild(table);
     }
@@ -37,20 +30,40 @@ function createCell(){
 
 };
 
-function gameController(){
+(function gameController(){
+    const gameboardSquares = gameContainer.querySelectorAll(".table div");
+    const gameText = document.querySelector(".text");
+    const playerTurn = [];
+    
 
-};
-// function createPlayer(name, symbol){
-//     return {
-//         name,
-//         symbol,
-//         introduction(){
-//             return `Welcome ${name}` 
-//         }
-//     }
-// }
+    function createPlayer(name, symbol){
+            return {
+                name,
+                symbol,
+                displayTurn(){
+                    return gameText.innerText = `It is ${name}'s turn`; 
+                }
+            }
+        }
+        
+    const playerOne = createPlayer("Player One", "O");
+    const playerTwo = createPlayer("Player Two", "X");
 
-// const playerOne = createPlayer("Player One", "O");
-// const playerTwo = createPlayer("Player Two", "X");
+    function userInput(){
+        console.log(gameboardSquares)
+        checkWinner();
+    }
+
+
+    function checkWinner(){
+
+    }
+
+    gameboardSquares.forEach((square) => {
+        square.addEventListener("click", userInput);
+    })
+
+})();
+
 
 
