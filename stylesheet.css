@@ -40,6 +40,8 @@ img {
     justify-content: center;
     align-items: center;
     border: 1px black solid;
+    font-size: 50px;
+    font-weight: 150;
 }
 
 .cell:hover {
@@ -51,3 +53,26 @@ img {
     background-color: rgb(206, 231, 252);
     cursor: pointer;
 }
+
+.text {
+    font-size: 25px;
+}
+
+.play-again{
+    font-size: 24px;
+    padding: 15px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.play-again:hover {
+    color: #4caf50;
+}
+
+.play-again:active {
+    border-color: #45a049; 
+    font-size: 30px;
+    color: 4caf50;
+}
+
