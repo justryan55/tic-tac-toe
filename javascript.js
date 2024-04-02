@@ -32,10 +32,11 @@ function createCell(){
 
 (function gameController(){
     const gameboardSquares = gameContainer.querySelectorAll(".table div");
+    const gameboardSquaresArray = Array.from(gameboardSquares);
     const gameText = document.querySelector(".text");
     const playerTurn = [];
+    const storeSquareIndex = [];
     
-
     function createPlayer(name, symbol){
             return {
                 name,
@@ -49,18 +50,26 @@ function createCell(){
     const playerOne = createPlayer("Player One", "O");
     const playerTwo = createPlayer("Player Two", "X");
 
+    function changeTurn(){
+        
+    }
+
     function userInput(){
-        console.log(gameboardSquares)
+        console.log(storeSquareIndex);
+        changeTurn();
         checkWinner();
     }
 
-
     function checkWinner(){
-
+      
     }
 
-    gameboardSquares.forEach((square) => {
-        square.addEventListener("click", userInput);
+    gameboardSquaresArray.forEach((square) => {
+        square.addEventListener("click", () => {
+            let squareIndex = gameboardSquaresArray.indexOf(square);
+            storeSquareIndex.push(squareIndex); 
+            userInput();
+        });
     })
 
 })();
