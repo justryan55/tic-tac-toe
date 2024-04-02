@@ -46,3 +46,8 @@ img {
     background-color: aliceblue;
     cursor: pointer;
 }
+
+.cell:active {
+    background-color: rgb(206, 231, 252);
+    cursor: pointer;
+}
